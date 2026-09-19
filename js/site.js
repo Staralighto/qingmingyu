@@ -138,21 +138,21 @@
      画廊轮播
      --------------------------------------------------------- */
   var galleryImages = [
-    { src: "assets/gallery/01-spawn-1.jpg", alt: "服务器实景" },
-    { src: "assets/gallery/02-castle.jpg", alt: "玩家建筑 城堡" },
-    { src: "assets/gallery/03-arena.jpg", alt: "玩家建筑 天空之城竞技场" },
-    { src: "assets/gallery/04-spawn-2.jpg", alt: "服务器实景" },
-    { src: "assets/gallery/05-shop-build.jpg", alt: "玩家建筑 商店" },
-    { src: "assets/gallery/06-spawn-3.jpg", alt: "服务器实景" },
-    { src: "assets/gallery/07-spawn-4.jpg", alt: "服务器实景" },
-    { src: "assets/gallery/08-spawn-5.jpg", alt: "服务器实景" },
-    { src: "assets/gallery/09-menu.jpg", alt: "主菜单界面" },
-    { src: "assets/gallery/10-warp.jpg", alt: "公共传送点界面" },
-    { src: "assets/gallery/11-enchant.jpg", alt: "协同附魔界面" },
-    { src: "assets/gallery/12-build-shop.jpg", alt: "建材商店界面" },
-    { src: "assets/gallery/13-sell.jpg", alt: "每日出售界面" },
-    { src: "assets/gallery/14-farm.jpg", alt: "田园种植界面" },
-    { src: "assets/gallery/15-fish.jpg", alt: "钓鱼界面" }
+    { src: "assets/gallery/01-spawn-1.jpg", alt: "青茗屿服务器主城实景 1" },
+    { src: "assets/gallery/02-castle.jpg", alt: "青茗屿服务器玩家建筑 城堡" },
+    { src: "assets/gallery/03-arena.jpg", alt: "青茗屿服务器玩家建筑 天空之城竞技场" },
+    { src: "assets/gallery/04-spawn-2.jpg", alt: "青茗屿服务器主城实景 2" },
+    { src: "assets/gallery/05-shop-build.jpg", alt: "青茗屿服务器玩家建筑 商店" },
+    { src: "assets/gallery/06-spawn-3.jpg", alt: "青茗屿服务器主城实景 3" },
+    { src: "assets/gallery/07-spawn-4.jpg", alt: "青茗屿服务器主城实景 4" },
+    { src: "assets/gallery/08-spawn-5.jpg", alt: "青茗屿服务器主城实景 5" },
+    { src: "assets/gallery/09-menu.jpg", alt: "青茗屿服务器主菜单界面" },
+    { src: "assets/gallery/10-warp.jpg", alt: "青茗屿服务器公共传送点界面" },
+    { src: "assets/gallery/11-enchant.jpg", alt: "青茗屿服务器协同附魔界面" },
+    { src: "assets/gallery/12-build-shop.jpg", alt: "青茗屿服务器建材商店界面" },
+    { src: "assets/gallery/13-sell.jpg", alt: "青茗屿服务器每日出售界面" },
+    { src: "assets/gallery/14-farm.jpg", alt: "青茗屿服务器田园种植界面" },
+    { src: "assets/gallery/15-fish.jpg", alt: "青茗屿服务器钓鱼界面" }
   ];
 
   var carousel = document.getElementById("carousel");
@@ -182,7 +182,7 @@
     var next = galleryImages[mod(index + 1, count)];
     if (slideMain) {
       slideMain.src = current.src;
-      slideMain.alt = current.alt + "，第 " + (index + 1) + " 张，共 " + count + " 张";
+      slideMain.alt = current.alt;
     }
     if (slideMainWebp) slideMainWebp.srcset = galleryMainSrcset(current.src);
     if (slidePrev) slidePrev.src = prev.src;
@@ -282,7 +282,7 @@
     if (playTitle) playTitle.textContent = play.title;
     if (playVisual) {
       playVisual.src = play.image;
-      playVisual.alt = play.title;
+      playVisual.alt = "青茗屿服务器" + play.title + "玩法";
       if (playVisualWebp) playVisualWebp.srcset = playImageSrcset(play.image);
     }
     if (playLines) {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://qingmingyu.staralighto.workers.dev/sitemap.xml
+Sitemap: https://qingmingyu.com/sitemap.xml
