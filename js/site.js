@@ -48,23 +48,36 @@
     sections.forEach(function (s) { observer.observe(s); });
   }
 
-  /* ponytail: AABB vs 几个标题，撞了就藏品牌。漏检/晚一帧可接受 */
+  /* ponytail: AABB vs 标题/图片，撞了就藏导航文字。漏检/晚一帧可接受 */
   var brand = document.querySelector(".brand");
-  var brandTargets = document.querySelectorAll(".section-title, .play-title, .footer-brand-name");
+  var navLinks = document.querySelector(".nav-links");
+  var brandTargets = document.querySelectorAll(".section-title, .play-title, .footer-brand-name, .timeline");
+  var mobileTargets = document.querySelectorAll(".section-head, .play-title, .play-lines, .rules-list, .footer-brand-name, .timeline, .carousel-main img, .visual-slot img, .qr-card img");
   var brandQueued = false;
 
   function hits(a, b) {
     return a.right > b.left && a.left < b.right && a.bottom > b.top && a.top < b.bottom;
   }
 
-  function checkBrand() {
-    if (!brand) return;
-    var a = brand.getBoundingClientRect();
-    var hide = false;
-    for (var i = 0; i < brandTargets.length; i++) {
-      if (hits(a, brandTargets[i].getBoundingClientRect())) { hide = true; break; }
+  function overlaps(a, targets) {
+    for (var i = 0; i < targets.length; i++) {
+      if (hits(a, targets[i].getBoundingClientRect())) return true;
     }
-    brand.classList.toggle("is-away", hide);
+    return false;
+  }
+
+  function isMobile() {
+    return !!(window.matchMedia && window.matchMedia("(max-width:768px)").matches);
+  }
+
+  function checkBrand() {
+    var mobile = isMobile();
+    if (brand) {
+      brand.classList.toggle("is-away", overlaps(brand.getBoundingClientRect(), mobile ? mobileTargets : brandTargets));
+    }
+    if (navLinks) {
+      navLinks.classList.toggle("is-away", mobile && overlaps(navLinks.getBoundingClientRect(), mobileTargets));
+    }
   }
 
   function watchBrand() {
@@ -300,14 +313,21 @@
   }
 
   if (copyBtn) {
-    var originalLabel = copyBtn.textContent;
+    var copyLabel = copyBtn.querySelector(".copy-btn-text");
+    var originalLabel = copyLabel ? copyLabel.textContent : copyBtn.textContent;
+
+    function setCopied(on) {
+      copyBtn.classList.toggle("is-copied", on);
+      if (copyLabel) copyLabel.textContent = on ? "已复制" : originalLabel;
+    }
+
     copyBtn.addEventListener("click", function () {
       var ip = copyBtn.getAttribute("data-ip") || "";
 
       function flash() {
-        copyBtn.textContent = "已复制";
+        setCopied(true);
         clearTimeout(copyTimer);
-        copyTimer = setTimeout(function () { copyBtn.textContent = originalLabel; }, 1800);
+        copyTimer = setTimeout(function () { setCopied(false); }, 1800);
       }
 
       if (navigator.clipboard && navigator.clipboard.writeText) {

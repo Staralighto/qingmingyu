@@ -85,7 +85,8 @@ button{font:inherit;color:inherit}
   transition:opacity .15s ease;
 }
 
-.brand.is-away{
+.brand.is-away,
+.nav-links.is-away{
   opacity:0;
   pointer-events:none;
 }
@@ -93,6 +94,7 @@ button{font:inherit;color:inherit}
 .nav-links{
   display:flex;
   gap:clamp(18px,3vw,52px);
+  transition:opacity .15s ease;
 }
 
 .nav-links a{
@@ -243,6 +245,8 @@ button{font:inherit;color:inherit}
 }
 
 .copy-btn:hover{opacity:.85}
+
+.copy-btn-icon{display:none;width:20px;height:20px}
 
 .qr-card{
   display:flex;
@@ -733,6 +737,24 @@ button{font:inherit;color:inherit}
 
   .ip-card{width:auto;max-width:none}
   .ip-value{font-size:17px}
+  .ip-kicker{gap:8px;white-space:nowrap}
+
+  .copy-btn{
+    width:46px;
+    height:46px;
+    margin-left:auto;
+    padding:0;
+    display:grid;
+    place-items:center;
+    background:transparent;
+    color:#fff;
+  }
+  .copy-btn:hover{opacity:1}
+  .copy-btn-text{display:none}
+  .copy-btn-icon{width:24px;height:24px}
+  .copy-btn-icon--copy{display:block}
+  .copy-btn.is-copied .copy-btn-icon--copy{display:none}
+  .copy-btn.is-copied .copy-btn-icon--check{display:block}
 
   .qr-card{
     flex-direction:row;
@@ -746,6 +768,8 @@ button{font:inherit;color:inherit}
 
   .section{padding:64px 18px}
   .section-title{font-size:clamp(38px,11vw,56px)}
+
+  #gallery{min-height:auto}
 
   .carousel-frame{grid-template-columns:1fr;gap:0}
   .carousel-side{display:none}

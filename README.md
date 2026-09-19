@@ -2,7 +2,7 @@
 
 「青茗屿」1.21.10 Minecraft Java 版原版生存服务器的玩家宣传页。
 
-**访问网站**：https://staralighto.github.io/qingmingyu/
+**访问网站**：https://qingmingyu.staralighto.workers.dev/
 
 ## 页面内容
 
