@@ -125,14 +125,14 @@
      画廊轮播
      --------------------------------------------------------- */
   var galleryImages = [
-    { src: "assets/gallery/01-spawn-1.jpg", alt: "服务器主城实景" },
+    { src: "assets/gallery/01-spawn-1.jpg", alt: "服务器实景" },
     { src: "assets/gallery/02-castle.jpg", alt: "玩家建筑 城堡" },
     { src: "assets/gallery/03-arena.jpg", alt: "玩家建筑 天空之城竞技场" },
-    { src: "assets/gallery/04-spawn-2.jpg", alt: "服务器主城实景" },
+    { src: "assets/gallery/04-spawn-2.jpg", alt: "服务器实景" },
     { src: "assets/gallery/05-shop-build.jpg", alt: "玩家建筑 商店" },
-    { src: "assets/gallery/06-spawn-3.jpg", alt: "服务器主城实景" },
-    { src: "assets/gallery/07-spawn-4.jpg", alt: "服务器主城实景" },
-    { src: "assets/gallery/08-spawn-5.jpg", alt: "服务器主城实景" },
+    { src: "assets/gallery/06-spawn-3.jpg", alt: "服务器实景" },
+    { src: "assets/gallery/07-spawn-4.jpg", alt: "服务器实景" },
+    { src: "assets/gallery/08-spawn-5.jpg", alt: "服务器实景" },
     { src: "assets/gallery/09-menu.jpg", alt: "主菜单界面" },
     { src: "assets/gallery/10-warp.jpg", alt: "公共传送点界面" },
     { src: "assets/gallery/11-enchant.jpg", alt: "协同附魔界面" },
@@ -149,18 +149,33 @@
   var dotsWrap = document.getElementById("carouselDots");
   var prevBtn = document.getElementById("carouselPrev");
   var nextBtn = document.getElementById("carouselNext");
+  var slidePrevWebp = document.getElementById("slidePrevWebp");
+  var slideMainWebp = document.getElementById("slideMainWebp");
+  var slideNextWebp = document.getElementById("slideNextWebp");
   var dots = [];
   var index = 0;
   var count = galleryImages.length;
 
   function mod(n, m) { return ((n % m) + m) % m; }
 
+  function fullWebp(src) { return src.replace(/\.(jpe?g|png)$/i, ".webp"); }
+  function gallerySmallWebp(src) { return src.replace(/\.(jpe?g|png)$/i, "-800.webp"); }
+  function galleryMainSrcset(src) { return gallerySmallWebp(src) + " 800w, " + fullWebp(src) + " 1600w"; }
+  function playImageSrcset(src) { return src.replace(/\.(jpe?g|png)$/i, "-640.webp") + " 640w, " + fullWebp(src) + " 1280w"; }
+
   function renderGallery() {
     var current = galleryImages[index];
-    slideMain.src = current.src;
-    slideMain.alt = current.alt + "，第 " + (index + 1) + " 张，共 " + count + " 张";
-    slidePrev.src = galleryImages[mod(index - 1, count)].src;
-    slideNext.src = galleryImages[mod(index + 1, count)].src;
+    var prev = galleryImages[mod(index - 1, count)];
+    var next = galleryImages[mod(index + 1, count)];
+    if (slideMain) {
+      slideMain.src = current.src;
+      slideMain.alt = current.alt + "，第 " + (index + 1) + " 张，共 " + count + " 张";
+    }
+    if (slideMainWebp) slideMainWebp.srcset = galleryMainSrcset(current.src);
+    if (slidePrev) slidePrev.src = prev.src;
+    if (slidePrevWebp) slidePrevWebp.srcset = gallerySmallWebp(prev.src);
+    if (slideNext) slideNext.src = next.src;
+    if (slideNextWebp) slideNextWebp.srcset = gallerySmallWebp(next.src);
     dots.forEach(function (dot, i) {
       var active = i === index;
       dot.setAttribute("aria-current", active ? "true" : "false");
@@ -243,6 +258,7 @@
   var playTitle = document.getElementById("playTitle");
   var playLines = document.getElementById("playLines");
   var playVisual = document.getElementById("playVisual");
+  var playVisualWebp = document.getElementById("playVisualWebp");
 
   function selectPlay(i) {
     var play = PLAYS[i];
@@ -254,6 +270,7 @@
     if (playVisual) {
       playVisual.src = play.image;
       playVisual.alt = play.title;
+      if (playVisualWebp) playVisualWebp.srcset = playImageSrcset(play.image);
     }
     if (playLines) {
       playLines.innerHTML = "";

@@ -1,3 +1,11 @@
+@font-face{
+  font-family:"Noto Sans SC";
+  font-style:normal;
+  font-weight:400 900;
+  font-display:swap;
+  src:url(../assets/fonts/noto-sans-sc.woff2) format("woff2");
+}
+
 :root{
   --lime:#C8F54A;
   --paper:#FAFAFA;
@@ -516,6 +524,10 @@ button{font:inherit;color:inherit}
   object-fit:cover;
   display:block;
 }
+
+.carousel-main picture,
+.visual-slot picture,
+.qr-card picture{display:contents}
 
 /* ---------- rules ---------- */
 

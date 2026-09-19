@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://staralighto.github.io/qingmingyu/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/hero.jpg</image:loc>
+      <image:title>青茗屿 Minecraft 服务器宣传画</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/01-spawn-1.jpg</image:loc>
+      <image:title>服务器实景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/02-castle.jpg</image:loc>
+      <image:title>玩家建筑 城堡</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/03-arena.jpg</image:loc>
+      <image:title>玩家建筑 天空之城竞技场</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/04-spawn-2.jpg</image:loc>
+      <image:title>服务器实景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/05-shop-build.jpg</image:loc>
+      <image:title>玩家建筑 商店</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/06-spawn-3.jpg</image:loc>
+      <image:title>服务器实景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/07-spawn-4.jpg</image:loc>
+      <image:title>服务器实景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/08-spawn-5.jpg</image:loc>
+      <image:title>服务器实景</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/09-menu.jpg</image:loc>
+      <image:title>主菜单界面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/10-warp.jpg</image:loc>
+      <image:title>公共传送点界面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/11-enchant.jpg</image:loc>
+      <image:title>协同附魔界面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/12-build-shop.jpg</image:loc>
+      <image:title>建材商店界面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/13-sell.jpg</image:loc>
+      <image:title>每日出售界面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/14-farm.jpg</image:loc>
+      <image:title>田园种植界面</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://staralighto.github.io/qingmingyu/assets/gallery/15-fish.jpg</image:loc>
+      <image:title>钓鱼界面</image:title>
+    </image:image>
+  </url>
+</urlset>
