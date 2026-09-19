@@ -1,6 +1,9 @@
 # 临时素材（原图 / 源文件，不随仓库发布）
 /tmp-images/
 
+# 内部交接文档（不入库、不发布）
+/docs/handoff.md
+
 # 操作系统
 .DS_Store
 Thumbs.db
