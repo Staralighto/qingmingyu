@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青茗屿 · 玩家社区 · 非官方宣传页</title>
+<meta name="description" content="青茗屿 Minecraft 服务器宣传页：主城影像、玩法介绍与服务器规定。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+
+<header class="site-nav on-hero" id="siteNav">
+  <a class="brand" href="#top">青茗屿</a>
+  <nav class="nav-links" aria-label="主导航">
+    <a href="#top" data-nav="top" aria-current="true">首页</a>
+    <a href="#gallery" data-nav="gallery">画廊</a>
+    <a href="#gameplay" data-nav="gameplay">玩法</a>
+    <a href="#rules" data-nav="rules">规定</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <img class="hero-media" src="assets/hero.png" alt="青茗屿服务器宣传画" width="1672" height="941">
+  <h1 class="hero-title">青茗屿</h1>
+  <div class="hero-cards">
+    <div class="hero-card ip-card">
+      <div class="ip-copy">
+        <div class="ip-kicker">
+          <span class="card-label">IP</span>
+          <span class="ip-sep" aria-hidden="true">|</span>
+          <span class="ip-meta">1.21.10 Minecraft 服务器</span>
+        </div>
+        <p class="ip-value" id="ipValue">mc008.cn</p>
+      </div>
+      <button class="copy-btn" id="copyIp" type="button" data-ip="mc008.cn" aria-label="复制服务器地址">复制</button>
+    </div>
+    <div class="hero-card qr-card">
+      <img src="assets/qq-qr.png" alt="QQ 群二维码，群号 244392462" width="180" height="180">
+      <span class="card-label qr-label">QQ群：244392462</span>
+    </div>
+  </div>
+</section>
+
+<div class="paper">
+  <svg class="geometry" viewBox="0 0 100 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <polygon points="100,0 100,22 74,0" fill="#C8F54A"/>
+    <polygon points="0,88 22,105 0,122" fill="#C8F54A"/>
+    <polygon points="100,108 100,132 86,108" fill="#C8F54A"/>
+    <polygon points="100,248 100,268 90,248" fill="#C8F54A"/>
+    <polygon points="0,300 14,318 0,328" fill="#C8F54A"/>
+    <polygon points="0,390 10,400 0,400" fill="#C8F54A"/>
+    <polygon points="100,382 100,400 90,400" fill="#C8F54A"/>
+    <polygon class="geo-narrow" points="100,201 100,214 91,201" fill="#C8F54A"/>
+    <polygon class="geo-narrow" points="0,212 11,226 0,238" fill="#C8F54A"/>
+    <rect x="6" y="8" width="1.6" height="1.6" fill="#C8F54A"/>
+    <rect x="92" y="200" width="1.4" height="1.4" fill="#C8F54A"/>
+    <rect x="8" y="220" width="1.2" height="1.2" fill="#C8F54A"/>
+    <g class="geo-marks">
+      <path d="M12.1 36 H13.9 M13 35 V37" />
+      <path d="M73.1 96 H74.9 M74 94.5 V97.5" />
+      <path d="M11.1 250 H12.9 M12 248.5 V251.5" />
+      <path d="M87.1 332 H88.9 M88 330.5 V333.5" />
+    </g>
+  </svg>
+
+  <section class="section" id="gallery">
+    <div class="section-head">
+      <div class="section-head-row">
+        <h2 class="section-title">画廊</h2>
+        <span class="section-mark" aria-hidden="true"></span>
+      </div>
+      <p class="section-en">GALLERY</p>
+    </div>
+
+    <div class="carousel" id="carousel" tabindex="0" role="group" aria-label="青茗屿服务器影像轮播">
+      <div class="carousel-frame">
+        <div class="carousel-side" aria-hidden="true">
+          <img id="slidePrev" src="assets/gallery/15-fish.jpg" alt="">
+        </div>
+        <figure class="carousel-main">
+          <img id="slideMain" src="assets/gallery/01-spawn-1.jpg" alt="青茗屿服务器影像第 1 张，共 15 张">
+          <div class="carousel-dots" id="carouselDots" aria-label="选择影像"></div>
+        </figure>
+        <div class="carousel-side" aria-hidden="true">
+          <img id="slideNext" src="assets/gallery/02-castle.jpg" alt="">
+        </div>
+      </div>
+      <button class="carousel-arrow carousel-arrow--prev" id="carouselPrev" type="button" aria-label="上一张">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5 L8 12 L15 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
+      </button>
+      <button class="carousel-arrow carousel-arrow--next" id="carouselNext" type="button" aria-label="下一张">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5 L16 12 L9 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="section" id="gameplay">
+    <div class="section-head">
+      <div class="section-head-row">
+        <h2 class="section-title">玩法</h2>
+        <span class="section-mark" aria-hidden="true"></span>
+      </div>
+      <p class="section-en">GAMEPLAY</p>
+    </div>
+
+    <div class="gameplay-grid">
+      <ol class="timeline" id="timeline">
+        <li>
+          <button class="timeline-btn" type="button" data-index="0" aria-pressed="true">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="timeline-label">进阶附魔</span>
+          </button>
+        </li>
+        <li>
+          <button class="timeline-btn" type="button" data-index="1" aria-pressed="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="timeline-label">田园种植</span>
+          </button>
+        </li>
+        <li>
+          <button class="timeline-btn" type="button" data-index="2" aria-pressed="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="timeline-label">垂钓渔业</span>
+          </button>
+        </li>
+        <li>
+          <button class="timeline-btn" type="button" data-index="3" aria-pressed="false">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="timeline-label">酿造工艺</span>
+          </button>
+        </li>
+      </ol>
+
+      <div class="gameplay-text">
+        <h3 class="play-title" id="playTitle">进阶附魔</h3>
+        <div class="play-lines" id="playLines">
+          <p>服务器原创插件，加入30+种附魔</p>
+          <p>各种特殊效果随意搭配，带来丰富游玩体验</p>
+          <p>原版风格的简单机制，上手门槛低，一看就会。</p>
+        </div>
+      </div>
+
+      <figure class="visual-slot">
+        <img id="playVisual" src="assets/gameplay/01-enchant.png" alt="进阶附魔" width="1600" height="900">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="rules">
+    <div class="rules-head">
+      <div class="rules-title-wrap">
+        <span class="rules-ring" aria-hidden="true"></span>
+        <div class="rules-title-inner">
+          <h2 class="section-title rules-title">规定</h2>
+          <p class="section-en">RULES</p>
+          <span class="section-mark" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+
+    <ol class="rules-list">
+      <li>
+        <span class="index" aria-hidden="true">1</span>
+        <div class="rule-body">
+          <p class="rule-text">禁止注册多账号</p>
+          <p>每人最多注册2个账号，一个大号一个小号。</p>
+          <p>禁止多账号领奖励、做任务、做活动等方式获取不正当利益。</p>
+        </div>
+      </li>
+      <li>
+        <span class="index" aria-hidden="true">2</span>
+        <div class="rule-body">
+          <p class="rule-text">禁止作弊</p>
+          <p>禁止使用任何作弊行为，包括但不限于修改作弊模组、作弊脚本等。</p>
+        </div>
+      </li>
+      <li>
+        <span class="index" aria-hidden="true">3</span>
+        <div class="rule-body">
+          <p class="rule-text">禁止不文明言行</p>
+          <p>禁止辱骂、人身攻击、地域歧视等不文明行为。</p>
+          <p>禁止破坏、盗窃他人财物或建筑。</p>
+          <p>禁止未经允许的攻击、骚扰或纠缠。</p>
+          <p>请正确使用领地系统，管理方仅惩罚损害方，不承担恢复责任。</p>
+          <p>禁止刷屏、政治敏感、色情暴力内容及广告。</p>
+        </div>
+      </li>
+      <li>
+        <span class="index" aria-hidden="true">4</span>
+        <div class="rule-body">
+          <p class="rule-text">禁止卡服与利用漏洞</p>
+          <p>发现漏洞请上报管理员，严禁以任何形式利用。</p>
+          <p>禁止使用任何导致服务器卡顿的操作。</p>
+        </div>
+      </li>
+      <li>
+        <span class="index" aria-hidden="true">5</span>
+        <div class="rule-body">
+          <p class="rule-text">违规处理</p>
+          <p>违反以上协议将视情节轻重给予警告、临时封禁或永久封禁。赞助费用不予退还。</p>
+          <p>被永久封禁玩家不得开小号继续游玩，一经发现小号连带封禁。</p>
+        </div>
+      </li>
+    </ol>
+    <p class="rules-updated">更新于 2026-06-05</p>
+  </section>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <p class="footer-brand-name">青茗屿</p>
+        <p class="footer-brand-sub">玩家社区 · 非官方宣传页</p>
+        <span class="section-mark" aria-hidden="true"></span>
+      </div>
+
+      <nav class="footer-cols" aria-label="页脚导航">
+        <div class="footer-col">
+          <h3>栏目</h3>
+          <ul>
+            <li><a href="#top">首页</a></li>
+            <li><a href="#gallery">画廊</a></li>
+            <li><a href="#gameplay">玩法</a></li>
+            <li><a href="#rules">规定</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>社区</h3>
+          <ul>
+            <li><a href="#top">加入服务器</a></li>
+            <li><a href="#top">QQ群</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="footer-legal">
+      <p>© 2026 青茗屿玩家社区 | 与 Mojang Studios / Microsoft 无隶属或授权关系 | Minecraft® 为 Mojang AB 之商标</p>
+    </div>
+  </footer>
+</div>
+
+<script src="js/site.js"></script>
+</body>
+</html>
